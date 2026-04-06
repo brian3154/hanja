@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>한자교육소</title>
+</head>
+<body>
+    <div id="first">
+        <h1>漢字考査場 │ 한자고사장</h1>
+        <p>원하는 문제의 갯수를 기입하시오.</p>
+        <input type="number" placeholder="문제 갯수" id="input_num">
+        <button type="button" id="button_start">시작하기</button>
+    </div>
+    <div id="main">
+        <p id="hanja"></p>
+        <input type="text" placeholder="뜻" id="mean">
+        <input type="text" placeholder="음" id="pronounce">
+        <button type="button" id="button_next">Next</button>
+    </div>
+    <div id="result">
+        <p id="result_display"></p>
+        <button type="button" id="retry_btn">다시하기</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
