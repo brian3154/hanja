@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: "Times New Roman", serif;
-    background-color: #f4f1e8; /* 종이 느낌 */
+    background-color: #f4f1e8;
     color: #2c2c2c;
   }
   
@@ -110,4 +110,57 @@ button:hover {
 }
 #result_display {
   font-size: 100px;
+}
+#playBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+
+  color: white;
+  background: linear-gradient(135deg, #fab873, #ad8051);
+  border: none;
+  border-radius: 999px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  box-shadow: 0 4px 15px rgba(175, 128, 76, 0.4);
+}
+
+/* 호버 */
+#playBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(175, 128, 79, 0.6);
+}
+
+/* 클릭 */
+#playBtn:active {
+  transform: scale(0.95);
+}
+
+/* 살짝 빛나는 효과 */
+#playBtn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#playBtn:hover::after {
+  opacity: 1;
 }
