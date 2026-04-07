@@ -7,6 +7,8 @@ const main_div = document.getElementById("main");
 const result_div = document.getElementById("result");
 const result_display = document.getElementById("result_display");
 const retry_btn = document.getElementById("retry_btn");
+const music = new Audio('playlist.mp3');
+const button_play = document.getElementById("playBtn");
 let range = [];
 let allData = [];
 let answer_num = 0;
@@ -55,6 +57,19 @@ function shuffle(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
 }
+let boolll = true;
+music.loop = true;
+button_play.addEventListener('click', () => {
+  if (boolll === true) {
+    music.play();
+    button_play.textContent = "🔊";
+    boolll = false;
+  } else {
+    music.pause();
+    button_play.textContent = "🔇";
+    boolll = true;
+  }
+})
 button_start.addEventListener('click', () => {
   value = Number(input_num.value);
   answer_num = 0;
