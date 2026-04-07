@@ -90,4 +90,5 @@ retry_btn.addEventListener('click', () => {
   result_div.style.display = "none";
   first_div.style.display = "flex";
   document.getElementById("input_num").value = "";
+  answer_num = 0;
 });
