@@ -7,7 +7,7 @@ const main_div = document.getElementById("main");
 const result_div = document.getElementById("result");
 const result_display = document.getElementById("result_display");
 const retry_btn = document.getElementById("retry_btn");
-const music = new Audio('playlist.mp3');
+const music = new Audio('bgmplaylist.mp3');
 const button_play = document.getElementById("playBtn");
 let range = [];
 let allData = [];
@@ -32,7 +32,9 @@ function true_false(num) {
   let data_mean = allData[num].mean;
   let data_pronounce = allData[num].pronounce;
   let answer_mean = document.getElementById("mean").value;
+  answer_mean = answer_mean.replace(/\s/g, ""); 
   let answer_pronounce = document.getElementById("pronounce").value;
+  answer_pronounce = answer_pronounce.replace(/\s/g, ""); 
   if (data_mean === answer_mean && data_pronounce === answer_pronounce) {
     Swal.fire({
       title: "정답입니다!",
